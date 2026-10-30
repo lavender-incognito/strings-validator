@@ -1,0 +1,10 @@
+{
+  "name": "@lavender/string-validator",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/entry.ts",
+    "minimals": "./src/minimals/index.ts"
+  },
+  "exclude": ["tests"]
+}
