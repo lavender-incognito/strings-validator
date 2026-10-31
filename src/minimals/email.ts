@@ -1,10 +1,9 @@
 import LibErr from "../error";
 
- type Domain = `${string}.${string}`;
- type Rules = {
+type Domain = `${string}.${string}`;
+type Rules = {
   domain?: Domain;
 };
-
 
 //Regex
 const domainRegex =
@@ -13,7 +12,7 @@ const emailRegex =
   /^(?=.{1,254}$)(?=.{1,64}@)(?!\.)(?!.*\.\.)[a-zA-Z0-9_%+-]+(?:\.[a-zA-Z0-9_%+-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}$/;
 
 //email validation
-export function validateEmail(input: string, rules?: Rules) {
+export function validateEmail(input: string, rules?: Rules): boolean {
   const { domain } = rules!;
 
   if (typeof input !== "string")

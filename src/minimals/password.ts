@@ -14,7 +14,7 @@ const lowerCaseRegex = /[a-z]/;
 const symbolRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~`]/;
 
 //validation
-export function validatePassword(input: string, rules?: Rules) {
+export function validatePassword(input: string, rules?: Rules):boolean {
   const { len, upperCase, digits, symbols } = rules!;
 
   if (typeof input !== "string")
