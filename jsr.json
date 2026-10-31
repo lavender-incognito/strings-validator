@@ -4,7 +4,7 @@
   "license": "MIT",
   "exports": {
     ".": "./src/entry.ts",
-    "minimals": "./src/minimals/index.ts"
+    "./minimals": "./src/minimals/index.ts"
   },
   "exclude": ["tests"]
 }
